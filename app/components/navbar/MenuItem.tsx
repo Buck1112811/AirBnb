@@ -9,8 +9,6 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ onClick, label }) => {
 
-    console.log("asdfas");
-    
     return (
 
         <div
