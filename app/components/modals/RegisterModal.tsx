@@ -5,7 +5,7 @@ import { AiOutlineGithub } from "react-icons/ai"
 import { FcGoogle} from 'react-icons/fc'
 import { useCallback, useState } from 'react'
 import {
-    Fieldvalues,
+    FieldValues,
     SubmitHandler,
     useForm,
 } from 'react-hook-form';
@@ -27,7 +27,7 @@ const RegisterModal = () => {
         formState: {
             errors,
         }
-    } = useForm<Fieldvalues>({
+    } = useForm<FieldValues>({
         defaultValues: {
             name: '',
             email: '',
@@ -35,7 +35,7 @@ const RegisterModal = () => {
         }
     })
     
-    const onSubmit: SubmitHandler<Fieldvalues> = (data) => {
+    const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
 
         axios.post('/api/register', data)
